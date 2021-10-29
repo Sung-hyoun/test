@@ -59,8 +59,10 @@ public class UserController {
     	String apiURL = "https://openapi.naver.com/v1/nid/me";
         String headerStr = "Bearer " + accessToken.getAccessToken(); // Bearer 다음에 공백 추가
         String res = null;
+       
 		try {
 			res = requestToServer(apiURL, headerStr);
+			System.out.println(res);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
